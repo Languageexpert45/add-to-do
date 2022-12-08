@@ -1,0 +1,9 @@
+.addButton {
+  margin-left: 0.5rem;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}

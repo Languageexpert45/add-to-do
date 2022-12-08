@@ -1,0 +1,8 @@
+.list {
+  margin-top: 1rem;
+  text-align: left;
+  list-style: none;
+}
+.list__container {
+  height: 100px;
+}
