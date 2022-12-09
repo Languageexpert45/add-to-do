@@ -28,30 +28,29 @@ export const todoSlice = createSlice({
 
     toggleCompleteness: (state, { payload }) => {
       const { id } = payload;
-
       const targetTodo = state.byIds[id];
 
       targetTodo.completed = !targetTodo.completed;
     },
 
     removeTodo: (state, action) => {
-
       const targetTodo = action.payload.id;
 
       state.allIds = state.allIds.filter(item => item !== targetTodo)
-
     },
 
-    filterCompleted: (state, {payload}) => {
+    filterCompleted: (state, todos) => {
+      const targetTodos = todos.payload.filter(item => item = item.completed);
+      const targetIds = targetTodos.map(item => item = item.id);
 
-      
-
+      state.allIds = targetIds;
     },
 
-    filterNotCompleted: (state, {payload}) => {
+    filterNotCompleted: (state, todos) => {
+      const targetTodos = todos.payload.filter(item => item = item.completed === false);
+      const targetIds = targetTodos.map(item => item = item.id);
 
-      
-
+      state.allIds = targetIds;
     },
 
 

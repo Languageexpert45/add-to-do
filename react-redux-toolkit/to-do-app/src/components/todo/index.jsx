@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import cx from "classnames";
-
 import { toggleCompleteness, removeTodo } from "../../store/slices/todo";
-
 import styles from './index.module.css';
+
+
 
 export const Todo = ({ todo }) => {
   const dispatch = useDispatch();
